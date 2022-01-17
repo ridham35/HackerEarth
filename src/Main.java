@@ -1,7 +1,14 @@
+import java.util.Arrays;
+import java.util.Objects;
+import java.util.Scanner;
+
 public class Main {
 
 	public static void main(String[] args) {
-		int[] arr = {-3, 2, 3, -4, 3, 1};
+
+		//		int[] arr = {-3, 2, 3, -4, 3, 1};
+		//		int[] arr = {1, 3, 1, 2, 5};
+		int[] arr = {2, 1, 3, 9, 2, 4, -10, -9, 1, 3};
 
 		int sum = Integer.MIN_VALUE;
 		int currentSum = 0;
@@ -19,8 +26,8 @@ public class Main {
 			sum = Math.max(sum, currentSum);
 			currentSum = 0;
 			pairSize = 1;
-			currentIndex = startIndex;
 			startIndex++;
+			currentIndex = startIndex;
 		}
 		System.out.println(sum);
 
